@@ -14,25 +14,16 @@
 </footer>
 
 <!--footer-->
-<footer class="footer <?php if (!is_home()) : echo 'footer--with-background'; endif; ?>">
-    <nav class="navigation navigation--footer" role="navigation">
-        <?php
-            
-            $defaults = array(
-            'theme_location'  => 'typecodefootermenu',
-            'container'       => '', 
-            'container_class' => '', 
-            'echo'            => false,
-            'fallback_cb'     => false,
-            'items_wrap'      => '%3$s',
-            'depth'           => 0
-            );
-            echo strip_tags(wp_nav_menu( $defaults ), '<a>');
-        ?>
-    </nav>
+<footer class="footer">
     <br />
+    <div class="header-footer">Fotverksbryggeriet</div>
+    <div class="tagline-footer">Et skritt til siden for alt du har drukket før..</div>
+    <div class="address-footer">
+      Fotverksbryggeriet<br />
+      Mellomila 39A<br />
+      7018 Trondheim
+    </div>
     <br />
-    &copy; 2011 &mdash; <?php echo date('Y'); ?> CRH unless otherwise stated.
 </footer>
 <!--footer-->
 <a href="#top" id="scrolltotop" title="Scroll to top">&uarr;</a>

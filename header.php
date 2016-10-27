@@ -6,8 +6,8 @@
 
         <title>
             <?php
-                echo wp_title(" -- ", true, right); 
-                echo bloginfo("name");         
+                echo wp_title(" -- ", true, right);
+                echo bloginfo("name");
             ?>
         </title>
 
@@ -66,18 +66,18 @@
             <div class="header__column header__column--left">
                 <div class="fot-logo">
                     <a class="fot-logo__link" href="http://fotverksbryggeriet.no">
-                        fotverksbryggeriet.no
+                      fotverksbryggeriet.no
                     </a>
                 </div>
             </div>
             <div class="header__column header__column--right">
                 <!--navigation-->
                 <nav class="navigation" role="navigation">
-                    <?php                        
+                    <?php
                         $defaults = array(
                         'theme_location'  => 'fotverksbryggerietheadermenu',
-                        'container'       => '', 
-                        'container_class' => '', 
+                        'container'       => '',
+                        'container_class' => '',
                         'echo'            => false,
                         'fallback_cb'     => false,
                         'items_wrap'      => '%3$s',

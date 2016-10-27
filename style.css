@@ -23,7 +23,7 @@ body {
     background: #4a4a4a;
     color: #4a4a4a;
     font-family: 'brandon-grotesque', Helvetica, Arial, sans-serif;
-    font-size: 16px !important;
+    font-size: 18px !important;
     font-weight: normal;
     line-height: 1.5em;
     margin: 0 !important;
@@ -80,9 +80,29 @@ a:hover, a:active, a:focus {
 /*headings*/
 
 h1, h2, h3, h4, h5, h6 {
-    color: #262626;
+    /* color: #262626; */
     font-family: 'brandon-grotesque', sans-serif;
-    font-weight: normal !important;
+    /* font-weight: normal !important; */
+}
+
+h2 {
+  color: #1D5A60;
+  font-weight: 500;
+  font-size: 1.556em;
+}
+
+
+.beer__heading_list a {
+    color: #1D5A60;
+    font-weight: bold;
+    font-size: 1.3em;
+    border-bottom: 0;
+  
+}
+
+.beer__heading_list a:hover {
+    border-bottom: 3px solid transparent !important;
+    transition: border 0s;
 }
 
 @media screen and (max-width: 768px) {
@@ -191,23 +211,34 @@ h1, h2, h3, h4, h5, h6 {
 /*footer*/
 
 .footer {
-    color: #262626;
-    font: normal 0.9em 'rationaltwdisplaymedium';
+    color: #fff;
+    background-color: #1D5A60;
+    font: normal 1em 'brandon-grotesque', sans-serif;
     margin: 10vh auto 0;
     padding: 50px;
     text-align: center;
     width: 100%;
 }
 
-.footer--with-background {
-    background: url(images/typecode-pattern-sm.png);
-    background-position: center top;
-    padding: 50px 25px 25px;
+.header-footer {
+    font-weight: 500;
+    font-size: 2em;
+}
+
+.tagline-footer {
+    font-weight: 300;
+    font-size: 1.222em;
+}
+
+.address-footer {
+    margin-top: 20px;
+    font-weight: 300;
+    font-size: 0.889em;
 }
 
 @media screen and (max-width: 768px) {
     .footer {
-        font: normal 0.85em 'rationaltwdisplaymedium';
+        font: normal 0.85em 'brandon-grotesque', sans-serif;
     }
 }
 
@@ -257,10 +288,31 @@ h1, h2, h3, h4, h5, h6 {
 
 /*beer*/
 
+.beer-title {
+    background: #3796A0;
+    color: #fff;
+    padding: 20px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
 .beer {
     background: #fff;
     color: #4a4a4a;
     padding: 30px;
+}
+
+.beer-type {
+    background: #A0B73F;
+    color: #fff;
+    margin: 0 0 24px 0;
+    text-transform: uppercase;
+    font-size: 0.778em;
+    font-family: 'brandon-grotesque', sans-serif;
+    font-weight: 400;
+    width: auto;
+    padding: 2px 4px 2px 4px;
+
 }
 
 
