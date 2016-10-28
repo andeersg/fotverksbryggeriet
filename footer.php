@@ -26,7 +26,6 @@
     <br />
 </footer>
 <!--footer-->
-<a href="#top" id="scrolltotop" title="Scroll to top">&uarr;</a>
 
 <?php wp_footer(); ?>
 

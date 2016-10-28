@@ -22,7 +22,7 @@
         <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/bootstrap.min.css">
         <link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>" media="screen" />
 
-        <link rel="alternate" type="application/rss+xml" title="Fotverksbryggeriet RSS Feed" href="http://ulven.org/feed/" />
+        <link rel="alternate" type="application/rss+xml" title="Fotverksbryggeriet RSS Feed" href="http://fotverksbryggeriet,no/feed/" />
 
         <link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://fotverksbryggeriet.no/xmlrpc.php?rsd" />
         <link rel="pingback" href="http://fotverksbryggeriet.no/xmlrpc.php">
@@ -66,7 +66,7 @@
             <div class="header__column header__column--left">
                 <div class="fot-logo">
                     <a class="fot-logo__link" href="http://fotverksbryggeriet.no">
-                      fotverksbryggeriet.no
+                        <img class="bryggeri-logo" src="<?php bloginfo('stylesheet_directory'); ?>/images/bryggeri_logo.png">
                     </a>
                 </div>
             </div>
