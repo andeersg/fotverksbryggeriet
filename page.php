@@ -19,9 +19,6 @@
 
                         <article class="article">
 
-
-                          <br />
-                          <br />
                         <?php the_content(); ?>
                         </article>
                     <br />

@@ -1,7 +1,7 @@
 ﻿/*
 Theme Name: Fotverksbryggeriet
 Theme URI: http://fotverksbryggeriet.no/
-Description: Theme by <a href="http://fotverksbryggeriet.no/">fotverksbryggeriet</a>.
+Description: Theme by <a href="http://fotverksbryggeriet.no/">Fotverksbryggeriet</a>.
 Version: 1
 Author: HILDEOR
 Author URI: http://fotverksbryggeriet
@@ -63,7 +63,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, 
 a {
     border: none;
     /* border-bottom: 3px solid #131313; */
-    color: #A0B73F;
+    color: #1D5A60;
     font-family: 'brandon-grotesque';
     padding: 0 0 2px;
     text-decoration: none !important;
@@ -72,9 +72,9 @@ a {
 
 a:hover, a:active, a:focus {
     border: none;
-    border-bottom: 3px solid #4a4a4a !important; /* todo: Fix.. */
-    transition: 0.5s;
-    color: #4a4a4a
+    border-bottom: 3px solid #3796A0 !important; /* todo: Fix.. */
+    /* transition: 0.5s; */
+    color: #3796A0;
 }
 
 /* Headings */
@@ -378,47 +378,6 @@ h3 {
     font-family: 'brandon-grotesque', sans-serif;
 }
 
-/* bbpress custom styling */
-
-#bbpress-forums {
-		background: #fff;
-		padding: 20px 15px 20px 15px;
-		font-size: 0.889em;
-}
-
-#bbp_search_submit { /* Search button */
-	background-color: #3796A0;
-	border-bottom: 4px solid #1D5A60;
-	height: 42px;
-	font-weight: 500;
-	font-size: 1.4em !important;
-  border-radius: 3px;
-  padding: 7px 25px;
-}
-
-#bbp_search_submit:hover {
-    background: #2CADBA;
-}
-
-#bbp_search { /* Input felt */
-      background: #fff;
-      border: none;
-      height: 42px;
-      border-bottom: 4px solid #A0B73F !important;
-      margin: 5px;
-}
-
-#bbp_search:focus {outline:0 !important;}
-
-
-.bbp-breadcrumb, .forum-titles, .bbp-forum-title, .bbp-forum-meta {
-    font-size: 1.5em !important;
-}
-
-.bbp-forum-topic-count, .bbp-forum-reply-count, .bbp-forum-freshness {
-    font-size: 1.2em !important;
-}
-
 
 /* alignment, float */
 
@@ -685,7 +644,7 @@ label {
 
 input {
     background: #fff;
-    border: 1px solid #4a4a4a;
+    border: 1px solid #C4BBC7;
     font: normal 1.1em 'brandon-grotesque';
     /* padding: 10px 20px 8px; */
     width: 50%;
@@ -715,6 +674,210 @@ textarea {
         width: 100%;
     }
 }
+
+/* ------- bbpress (forum) ------- */
+
+#bbpress-forums {
+		background: #fff;
+		padding: 20px 15px 20px 15px;
+		font-size: 1em !important;
+}
+
+#bbpress-forums ul.bbp-lead-topic,
+#bbpress-forums ul.bbp-topics,
+#bbpress-forums ul.bbp-forums,
+#bbpress-forums ul.bbp-replies,
+#bbpress-forums ul.bbp-search-results {
+	font-size: 1.2em !important;
+  /* border-top: 1px solid #3796A0 !important;
+  border-bottom: 2px solid #3796A0 !important; */
+}
+
+#bbpress-forums .bbp-forums-list li {
+	font-size: 1.9em;
+}
+
+#bbpress-forums div.bbp-forum-title h3,
+#bbpress-forums div.bbp-topic-title h3,
+#bbpress-forums div.bbp-reply-title h3 {
+	font-size: 1em !important;
+}
+
+span.bbp-author-ip {
+	font-family: 'brandon-grotesque', sans-serif;
+	font-size: 0.444em !important;
+	font-weight: 300 !important;
+}
+
+div.bbp-breadcrumb,
+div.bbp-topic-tags {
+	font-size: 1.4em !important;
+  display: none !important;
+}
+
+span.bbp-admin-links a {
+	color: #4a4a4a !important;
+	font-size: 0.444em !important;
+}
+
+#bbpress-forums .bbp-forum-info .bbp-forum-content,
+#bbpress-forums p.bbp-topic-meta {
+  font-size: 0.667em !important;
+  color: #4a4a4a !important;
+}
+
+.bbp-reply-post-date {
+  font-size: 0.6em !important;
+}
+
+#bbpress-forums #bbp-your-profile fieldset span.description {
+    font-size: 1.2em !important;
+    border: #1D5A60 1px solid !important;
+    background-color: #D6EAEC !important;
+}
+
+.bbp-topics-front ul.super-sticky,
+.bbp-topics ul.super-sticky,
+.bbp-topics ul.sticky,
+.bbp-forum-content ul.sticky {
+    background-color: #F6F8F0 !important; /* Bakgrunnsfarge sticky posts */
+    font-size: 1em !important;
+}
+
+#bbpress-forums .bbp-topic-content ul.bbp-topic-revision-log,
+#bbpress-forums .bbp-reply-content ul.bbp-topic-revision-log,
+#bbpress-forums .bbp-reply-content ul.bbp-reply-revision-log {
+    font-size: 0.667em !important; /* TODO: Fiks alignment med brukernavn og avatar */
+    color: #4a4a4a !important;
+}
+
+#bbpress-forums div.row-actions {
+    font-size: 0.667em !important;
+}
+
+.bbp-footer { /* Hide bb footer */
+	   display: none !important;
+}
+
+.bbp-header {
+	   font-size: 0.778em !important;
+}
+
+.avatar-14 {
+    display: none !important;
+}
+
+.bbp-topics {
+     margin-top: 20px !important;
+}
+
+#bbpress-forums .bbp-forums-list li {
+      font-size: 0.667em !important;
+}
+
+#bbpress-forums div.bbp-reply-author .bbp-author-role {
+      font-size: 0.667em !important;
+}
+
+img.avatar {
+-webkit-border-radius: 50%;
+-moz-border-radius: 50%;
+-ms-border-radius: 50%;
+-o-border-radius: 50%;
+border-radius: 50%;
+-webkit-box-shadow: 0 1px 0 #fff;
+-moz-box-shadow: 0 1px 0 #fff;
+box-shadow: 0 1px 0 #fff;
+}
+
+legend {
+  border-bottom: none !important;
+}
+
+/* Custom - not in bbpress.css */
+
+#bbp_search_submit { /* Search button */
+	background-color: #3796A0;
+	border-bottom: 4px solid #1D5A60;
+	height: 42px;
+	font-weight: 500;
+	font-size: 0.889em !important;
+  border-radius: 3px;
+  padding: 7px 25px;
+  margin-bottom: 20px;
+}
+
+#bbp_search_submit:hover {
+    background: #2CADBA;
+}
+
+#bbp_search { /* Input felt */
+      background: #fff;
+      border: 1px solid #C4BBC7 !important;
+      height: 42px;
+      margin: 5px 5px 20px 5px;
+}
+
+#bbp_search:focus {
+    outline:0 !important;
+}
+
+.bbp-template-notice.info {
+    display: none !important;
+}
+
+.bbp-template-notice p {
+    font-size: 0.8em !important;
+}
+
+#bbp_topic_submit {
+    background: #fff !important;
+  background-color: #3796A0 !important;
+  border: none;
+  border-bottom: 4px solid #1D5A60;
+  height: 42px;
+  font-weight: 500;
+  font-size: 0.889em !important;
+  border-radius: 3px;
+  padding: 7px 25px;
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+#bbp_topic_submit:hover {
+    background: #2CADBA !important;
+}
+
+#bbp_reply_submit {
+    background: #fff !important;
+  background-color: #3796A0 !important;
+  border: none;
+  border-bottom: 4px solid #1D5A60;
+  height: 42px;
+  font-weight: 500;
+  font-size: 0.889em !important;
+  border-radius: 3px;
+  padding: 7px 25px;
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+#bbp_reply_submit:hover {
+    background: #2CADBA !important;
+}
+
+.bbp-pagination-count {
+    display: none !important;
+}
+
+.bbp-reply-post-date {
+  margin-right: 15px !important;
+}
+
+.wp-editor-container {
+  border: 1px solid #eee !important;
+}
+
 
 /* general media queries */
 
