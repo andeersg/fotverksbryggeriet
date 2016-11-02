@@ -280,6 +280,11 @@ h3 {
     width: 100%;
 }
 
+.article {
+  background-color: #fff;
+  padding: 20px 20px;
+}
+
 /* Beer */
 
 .beer-title {
@@ -356,6 +361,31 @@ h3 {
 .pagination .next, .pagination .prev {
     font-family: 'brandon-grotesque', sans-serif;
 }
+
+/* bbpress custom styling */
+
+#bbpress-forums {
+		background: #fff;
+		padding: 20px 15px 20px 15px;
+		font-size: 0.889em;
+}
+
+#bbp_search_submit {
+	background-color: #3796A0;
+	border-bottom: 3px solid #1D5A60;
+	height: 42px;
+	font-weight: 500;
+	font-size: 0.889em;
+}
+
+.bbp-breadcrumb, .forum-titles, .bbp-forum-title, .bbp-forum-meta {
+    font-size: 1.5em !important;
+}
+
+.bbp-forum-topic-count, .bbp-forum-reply-count, .bbp-forum-freshness {
+    font-size: 1.2em !important;
+}
+
 
 /* alignment, float */
 

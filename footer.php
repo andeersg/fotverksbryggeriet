@@ -1,18 +1,10 @@
 </section>
 <!--main content-->
-<footer class="bottom">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-6 col-md-6">
-                <?php //dynamic_sidebar( 'bottom_content_left' ); ?>
-            </div>
-            <div class="col-lg-6 col-md-6">
-                <?php //dynamic_sidebar( 'bottom_content_right' ); ?>
-            </div>
-        </div>
-    </div>
-</footer>
 
+<?php
+  // closes user logged in check
+//  endif; 
+?>
 <!--footer-->
 <footer class="footer">
     <br />
@@ -26,6 +18,7 @@
     <br />
 </footer>
 <!--footer-->
+
 
 <?php wp_footer(); ?>
 

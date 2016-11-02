@@ -58,6 +58,8 @@
     </head>
     <body>
 
+
+
         <!--back to top-->
         <div class="hidden" id="top"></div>
         <!--back to top-->
@@ -91,3 +93,5 @@
         </header>
         <!--header-->
         <section id="main" class="content" role="main">
+
+                <?php // if ( is_user_logged_in() ): ?>
