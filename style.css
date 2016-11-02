@@ -71,12 +71,10 @@ a {
 }
 
 a:hover, a:active, a:focus {
-/*    border: none;
-    border-bottom: 3px solid transparent !important;
-    color: #484848;
-    transition: border 0.5s;
-    */
-    color: #1D5A60;
+    border: none;
+    border-bottom: 3px solid #4a4a4a !important; /* todo: Fix.. */
+    transition: 0.5s;
+    color: #4a4a4a
 }
 
 /* Headings */
@@ -127,7 +125,7 @@ h3 {
 /* Header */
 
 .header {
-    background: #fff;
+    background: #EEEEEE;
     border-bottom: 12px solid #a0b73f;
     display: table;
     height: 137px;
@@ -199,7 +197,7 @@ h3 {
     display: inline-block;
     font-family: 'brandon-grotesque', sans-serif;
     font-size: 0.778em;
-    font-weight: 400;
+    font-weight: 500;
     letter-spacing: 0.05em !important;
     margin: 0 30 0 30px;
     padding: 10px 30px 5px 30px;
@@ -258,7 +256,7 @@ h3 {
 }
 
 
-/* Cntent */
+/* Content */
 
 .content {
     margin: 0 auto;
@@ -284,6 +282,24 @@ h3 {
   background-color: #fff;
   padding: 20px 20px;
 }
+
+/* Buttons */
+
+.button-action--small {
+    background: #CED386;
+    color: #4A4A4A;
+    padding: 7px 25px 7px 25px;
+    border-bottom: 4px solid #A0B73F;
+    height: 42px;
+    font-weight: 500;
+    font-size: 0.889em;
+    border-radius: 3px;
+}
+
+.button-action--small:hover {
+    background: #D6DE6A;
+}
+
 
 /* Beer */
 
@@ -370,13 +386,30 @@ h3 {
 		font-size: 0.889em;
 }
 
-#bbp_search_submit {
+#bbp_search_submit { /* Search button */
 	background-color: #3796A0;
-	border-bottom: 3px solid #1D5A60;
+	border-bottom: 4px solid #1D5A60;
 	height: 42px;
 	font-weight: 500;
-	font-size: 0.889em;
+	font-size: 1.4em !important;
+  border-radius: 3px;
+  padding: 7px 25px;
 }
+
+#bbp_search_submit:hover {
+    background: #2CADBA;
+}
+
+#bbp_search { /* Input felt */
+      background: #fff;
+      border: none;
+      height: 42px;
+      border-bottom: 4px solid #A0B73F !important;
+      margin: 5px;
+}
+
+#bbp_search:focus {outline:0 !important;}
+
 
 .bbp-breadcrumb, .forum-titles, .bbp-forum-title, .bbp-forum-meta {
     font-size: 1.5em !important;
@@ -651,11 +684,10 @@ label {
 }
 
 input {
-    background: transparent;
-    border: 1px solid #373737;
-    color: #262626;
+    background: #fff;
+    border: 1px solid #4a4a4a;
     font: normal 1.1em 'brandon-grotesque';
-    padding: 10px 20px 8px;
+    /* padding: 10px 20px 8px; */
     width: 50%;
 }
 
