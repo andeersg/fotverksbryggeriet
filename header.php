@@ -59,20 +59,16 @@
     <body>
 
 
-
-        <!--back to top-->
-        <div class="hidden" id="top"></div>
-        <!--back to top-->
         <!--header-->
         <header class="header" role="banner">
             <div class="header__column header__column--left">
-                <div class="fot-logo">
+
                     <a class="fot-logo__link" href="http://fotverksbryggeriet.no">
                         <img class="bryggeri-logo" src="<?php bloginfo('stylesheet_directory'); ?>/images/bryggeri_logo.png">
                     </a>
-                </div>
-            </div>
-            <div class="header__column header__column--right">
+
+           </div>
+           <div class="header__column header__column--right">
                 <!--navigation-->
                 <nav class="navigation" role="navigation">
                     <?php
@@ -89,9 +85,21 @@
                     ?>
                 </nav>
                 <!--navigation-->
-            </div>
+         </div>
+
+
         </header>
         <!--header-->
+        <!--Breadcrumbs -->
+        <div class="breadcrumbs col-lg-8 col-lg-offset-2" typeof="BreadcrumbList" vocab="http://schema.org/">
+            <?php if(function_exists('bcn_display'))
+            {
+                bcn_display();
+            }?>
+        </div>
+
+
+
         <section id="main" class="content" role="main">
 
                 <?php // if ( is_user_logged_in() ): ?>

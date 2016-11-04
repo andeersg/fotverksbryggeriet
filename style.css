@@ -20,9 +20,9 @@ html {
 }
 
 body {
-    background: #4a4a4a;
+    background: #ffffff;
     color: #4a4a4a;
-    font-family: 'brandon-grotesque', Helvetica, Arial, sans-serif;
+    font-family: 'futura-pt', Helvetica, Arial, sans-serif;
     font-size: 18px !important;
     font-weight: normal;
     line-height: 1.5em;
@@ -63,8 +63,8 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, 
 a {
     border: none;
     /* border-bottom: 3px solid #131313; */
-    color: #1D5A60;
-    font-family: 'brandon-grotesque';
+    color: #3796A0;
+    font-family: 'futura-pt', sans-serif;
     padding: 0 0 2px;
     text-decoration: none !important;
     /* transition: border 0.5s; */
@@ -79,42 +79,20 @@ a:hover, a:active, a:focus {
 
 /* Headings */
 
-h1, h2, h3, h4, h5, h6 {
+h2, h3, h4, h5, h6 {
     /* color: #262626; */
-    font-family: 'brandon-grotesque', sans-serif;
+    font-family: 'futura-pt', sans-serif;
     /* font-weight: normal !important; */
 }
 
-h1 {
-  color: #fff;
-  font-weight: 500;
-  font-size: 2.667em;
-}
 
 h2 {
-  color: #1D5A60;
-  font-weight: 500;
-  font-size: 1.556em;
-}
-
-h3 {
-  color: #1D5A60;
-  font-weight: 500;
-  font-size: 1.556em;
+  /* margin-top: 0 !important; */
 }
 
 
-.beer__heading_list a {
-    color: #1D5A60;
-    font-weight: bold;
-    font-size: 1.3em;
-    border-bottom: 0;
-}
 
-.beer__heading_list a:hover {
-    border-bottom: 3px solid transparent !important;
-    transition: border 0s;
-}
+
 
 @media screen and (max-width: 768px) {
 
@@ -124,11 +102,14 @@ h3 {
 
 /* Header */
 
+.bryggeri-logo {
+  max-width: 170px;
+}
+
 .header {
-    background: #EEEEEE;
-    border-bottom: 12px solid #a0b73f;
+    background: #4a4a4a;
     display: table;
-    height: 137px;
+    height: 106px;
     line-height: 137px;
     margin: 0 auto 50px;
     padding: 0;
@@ -177,11 +158,7 @@ h3 {
     }
 }
 
-/* Howto: Mindre størrelse på mobil.. */
-.bryggeri-logo {
-  max-width: 170px;
 
-}
 
 
 /* Navigation */
@@ -193,22 +170,20 @@ h3 {
 
 .navigation a {
     border-bottom: 3px solid transparent !important;
-    color: #4a4a4a;
+    color: #ffffff;
     display: inline-block;
-    font-family: 'brandon-grotesque', sans-serif;
+    font-family: 'futura-pt', sans-serif;
     font-size: 0.778em;
-    font-weight: 500;
-    letter-spacing: 0.05em !important;
+    font-weight: 400;
+    letter-spacing: 0.3em !important;
     margin: 0 30 0 30px;
     padding: 10px 30px 5px 30px;
     text-transform: uppercase;
-
     transition: all 0.5s;
 }
 
 .navigation a:hover {
-    border-bottom: 3px solid #1D5A60 !important;
-    background-color: #3796A0;
+    border-bottom: 3px solid #3796A0 !important;
     color: #fff;
     transition: all 0.5s;
 }
@@ -225,8 +200,8 @@ h3 {
 
 .footer {
     color: #fff;
-    background-color: #1D5A60;
-    font: normal 1em 'brandon-grotesque', sans-serif;
+    background-color: #3796A0;
+    font: normal 1em 'futura-pt', sans-serif;
     margin: 10vh auto 0;
     padding: 50px;
     text-align: center;
@@ -251,7 +226,7 @@ h3 {
 
 @media screen and (max-width: 768px) {
     .footer {
-        font: normal 0.85em 'brandon-grotesque', sans-serif;
+        font: normal 0.85em 'futura-pt', sans-serif;
     }
 }
 
@@ -280,16 +255,16 @@ h3 {
 
 .article {
   background-color: #fff;
-  padding: 20px 20px;
+  /* padding: 10px 20px; */
 }
 
 /* Buttons */
 
 .button-action--small {
-    background: #CED386;
+    background: #E0CF00;
     color: #4A4A4A;
     padding: 7px 25px 7px 25px;
-    border-bottom: 4px solid #A0B73F;
+    border-bottom: 4px solid #AEA208;
     height: 42px;
     font-weight: 500;
     font-size: 0.889em;
@@ -297,37 +272,105 @@ h3 {
 }
 
 .button-action--small:hover {
-    background: #D6DE6A;
+    background: #EBDF3F;
+    border-bottom: 4px solid #AEA208;
 }
 
 
 /* Beer */
 
-.beer-title {
-    background: #3796A0;
-    color: #fff;
-    padding: 20px;
-    margin-bottom: 10px;
-    text-transform: uppercase;
+/* ----- Søk ----- */
+.beer__heading_list a {
+    color: #3796A0;
+    font-family: 'fatfrank', sans-serif;
+    font-size: 1em;
+    line-height: 1.5;
+    margin-top: 0;
+}
+
+.beer__heading_list a:hover {
+    border-bottom: 3px solid #3796A0 !important;
+}
+
+li.beer-meta-list-item {
+    display: inline;
+    color: #E0CF00;
+    margin-right: 40px;
+}
+
+li.beer-meta-list-item p {
+    color: #4a4a4a;
+    display: inline;
+}
+
+ul.beer-meta-list {
+    margin: auto;
+    padding: 0;
+
+}
+ul.beer-meta-list li.beer-meta-list-item:before {
+  content: '\2022';
+  margin-right: 0.5em;
+}
+
+/* --- Single ---*/
+
+.beer__heading {
+    font-family: 'fatfrank', 'futura-pt', sans-serif;
+    color: #3796A0;
+    font-size: 2.778em !important;
+    /* padding:40px; */
 }
 
 .beer {
     background: #fff;
     color: #4a4a4a;
-    padding: 30px;
+    /* padding: 30px; */
+    font-family: 'futura-pt', sans-serif;
 }
 
 .beer-type {
-    background: #A0B73F;
-    color: #fff;
-    margin: 0 0 24px 0;
+    color: #4a4a4a;
     text-transform: uppercase;
-    font-size: 0.778em;
-    font-family: 'brandon-grotesque', sans-serif;
-    font-weight: 400;
+    font-size: 1.111em;
+    font-family: 'fatfrank', sans-serif;
     width: auto;
-    padding: 2px 4px 2px 4px;
+    /* padding: 0 20px; */
+    letter-spacing: 0.06em !important;
+}
 
+.beer-type-icon {
+    padding-top: 5px;
+}
+
+.bryggmester-bilde {
+    float: left;
+}
+
+.bryggmester {
+    float: right;
+    margin-top: 0 !important;
+    /* margin-left: 20px; */
+}
+
+.beer__metadata-item {
+    font-family: 'futura-pt', sans-serif;
+    font-size: 0.889em;
+}
+
+.beer__metadata-item:before {
+  content: '\2022';
+  margin-right: 0.5em;
+  color: #E0CF00;
+}
+
+.density-tables-container {
+  padding-left: 0;
+
+}
+
+.beer__density-measurement {
+  margin-top: 20px;
 }
 
 
@@ -433,22 +476,22 @@ a[rel="attachment"] {
 }
 
 strong {
-    font-family: 'brandon-grotesque';
+    font-family: 'futura-pt';
     font-style: normal;
     font-weight: 500;
 }
 
 em {
-    font-family: 'brandon-grotesque';
+    font-family: 'futura-pt';
     font-style: normal;
 }
 
 strong em, em strong {
-    font-family: 'brandon-grotesque';
+    font-family: 'futura-pt';
 }
 
 sup, sub {
-    font: normal 0.7em 'brandon-grotesque';
+    font: normal 0.7em 'futura-pt';
     line-height: 18px;
     margin: 0;
     padding: 0;
@@ -456,7 +499,7 @@ sup, sub {
 
 a sup, a sub {
     border: none !important;
-    font-family: 'brandon-grotesque';
+    font-family: 'futura-pt';
     margin: 0 !important;
     padding: 0;
 }
@@ -467,7 +510,7 @@ small {
 
 abbr {
     border-bottom: 1px dotted #4a4a4a;
-    font-family: 'brandon-grotesque';
+    font-family: 'futura-pt';
     text-decoration: none;
 }
 
@@ -483,13 +526,13 @@ figure p {
 }
 
 figcaption {
-    font: normal 0.9em 'brandon-grotesque';
+    font: normal 0.9em 'futura-pt';
     margin: 0;
     padding: 20px 0;
 }
 
 figcaption a {
-    font-family: 'brandon-grotesque';
+    font-family: 'futura-pt';
 }
 
 img {
@@ -516,12 +559,13 @@ img a:hover {
 
 hr {
     border: none;
-    background: #4a4a4a;
-    color: #4a4a4a;
-    height: 6px;
-    margin: 0 auto 50px;
+    background: #979797;
+    color: #979797;
+    height: 1px;
     text-align: center;
-    width: 100px;
+    width: auto;
+    margin-top: 25px;
+
 }
 
 /* Table */
@@ -539,9 +583,10 @@ tr {
 th {
     background: #eee;
     color: #4a4a4a;
-    font-family: 'brandon-grotesque';
+    font-family: 'futura-pt';
     font-weight: 500;
-    padding: 20px;
+    padding: 15px 30px;
+    border-bottom: 2px solid #E0CF00;
 }
 
 th p, td p {
@@ -549,15 +594,15 @@ th p, td p {
 }
 
 td {
-    background: transparent;
+    background: #eee;
     border: none;
-    font-family: 'brandon-grotesque';
+    font-family: 'futura-pt';
     font-size: 1.111em;
-    padding: 20px;
+    padding: 15px 30px 15px 30px;
 }
 
 table caption {
-    font: normal 0.8em 'brandon-grotesque';
+    font: normal 0.8em 'futura-pt';
     letter-spacing: 0.05em;
     text-transform: uppercase;
 }
@@ -580,14 +625,14 @@ ol {
 }
 
 li {
-    font: normal 1em/1.8em 'brandon-grotesque';
-    list-style: none;
+    font: normal 1em/1.8em 'futura-pt';
+  /*  list-style: none; */
     margin: 15px 0;
     vertical-align: top;
 }
 
 ul li {
-    list-style: square;
+    list-style: disc;
 }
 
 ol li {
@@ -599,7 +644,7 @@ ol li::before {
     content: counter(counter) " – ";
     color: #4a4a4a;
     display: inline-block;
-    font: normal 1em 'brandon-grotesque';
+    font: normal 1em 'futura-pt';
     margin: 0;
     text-align: left;
     width: 40px;
@@ -633,7 +678,7 @@ placeholder {
 }
 
 label {
-    font-family: 'brandon-grotesque';
+    font-family: 'futura-pt';
     font-size: 0.85em;
     font-size: 15px;
     font-weight: normal;
@@ -645,7 +690,7 @@ label {
 input {
     background: #fff;
     border: 1px solid #C4BBC7;
-    font: normal 1.1em 'brandon-grotesque';
+    font: normal 1.1em 'futura-pt';
     /* padding: 10px 20px 8px; */
     width: 50%;
 }
@@ -654,7 +699,7 @@ input[type=submit] {
     background: #262626;
     border: none;
     color: #fff;
-    font-family: 'brandon-grotesque';
+    font-family: 'futura-pt';
     font-size: 15px;
     margin: auto 0 auto auto;
     padding: 10px 35px;
@@ -664,7 +709,7 @@ input[type=submit] {
 textarea {
     background: transparent;
     border: 1px solid #373737;
-    font: normal 1.1em 'brandon-grotesque';
+    font: normal 1.1em 'futura-pt';
     padding: 20px;
     width: 100%;
 }
@@ -704,7 +749,7 @@ textarea {
 }
 
 span.bbp-author-ip {
-	font-family: 'brandon-grotesque', sans-serif;
+	font-family: 'futura-pt', sans-serif;
 	font-size: 0.444em !important;
 	font-weight: 300 !important;
 }
