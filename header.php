@@ -90,16 +90,20 @@
 
         </header>
         <!--header-->
-        <!--Breadcrumbs -->
-        <div class="breadcrumbs col-lg-8 col-lg-offset-2" typeof="BreadcrumbList" vocab="http://schema.org/">
-            <?php if(function_exists('bcn_display'))
-            {
-                bcn_display();
-            }?>
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-8 col-lg-offset-2" typeof="BreadcrumbList" vocab="http://schema.org/">
+                <?php if(function_exists('bcn_display'))
+                {
+                    bcn_display();
+                }?>
+            </div>
+          </div>
         </div>
 
 
-
         <section id="main" class="content" role="main">
+          <!--Breadcrumbs -->
+
 
                 <?php // if ( is_user_logged_in() ): ?>

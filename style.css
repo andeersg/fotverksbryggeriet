@@ -92,8 +92,6 @@ h2 {
 
 
 
-
-
 @media screen and (max-width: 768px) {
 
 }
@@ -111,7 +109,7 @@ h2 {
     display: table;
     height: 106px;
     line-height: 137px;
-    margin: 0 auto 50px;
+    margin: 0 auto 30px;
     padding: 0;
     width: 100%;
 }
@@ -258,6 +256,12 @@ h2 {
   /* padding: 10px 20px; */
 }
 
+/* Index */
+.forside-bilde {
+  margin: auto;
+}
+
+
 /* Buttons */
 
 .button-action--small {
@@ -276,10 +280,51 @@ h2 {
     border-bottom: 4px solid #AEA208;
 }
 
+/* Blue buttons - primary */
+.button-prim--medium {
+    background: #3796A0 !important;
+    color: #ffffff !important;
+    padding: 9px 54px 12px 54px !important;
+    border-bottom: 4px solid #1D5A60 !important;
+    height: 51px !important;
+    font-weight: 400 !important;
+    font-size: 1.3em !important;
+    border-radius: 3px;
+}
+
+.button-prim--medium:hover {
+    background: #2CADBA !important;
+    border-bottom: 4px solid #1D5A60 !important;
+}
+
 
 /* Beer */
 
 /* ----- Søk ----- */
+
+.search-heading {
+    color: #3796A0;
+    font-family: 'futura-pt', sans-serif;
+    font-size: 3.556em;
+    font-weight: 500;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    line-height: 110%;
+}
+
+.main-search-input {
+    border: none;
+    border-bottom: 4px solid #E0CF00;
+    height: 51px;
+    margin-right: 20px;
+    max-width: 555px;
+}
+
+.search-input-submit {
+    margin: 0 0 30px 0;
+}
+
+
 .beer__heading_list a {
     color: #3796A0;
     font-family: 'fatfrank', sans-serif;
@@ -371,6 +416,22 @@ ul.beer-meta-list li.beer-meta-list-item:before {
 
 .beer__density-measurement {
   margin-top: 20px;
+}
+
+.comment-author {
+  font-weight: 500;
+    background-color: #eeeeee !important;
+}
+.comment-body {
+  margin-bottom: 15px;
+    background-color: #eeeeee !important;
+}
+
+
+.single-comment {
+  background-color: #eeeeee !important;
+  padding-left: 0 !important;
+  margin-bottom: 10px;
 }
 
 
@@ -571,10 +632,11 @@ hr {
 /* Table */
 
 table {
-    margin: 5vh auto;
+    /* margin: 5vh auto; */
     min-width: 60%;
     padding: 0;
     width: auto;
+    margin: 15px 0 30px 0;
 }
 
 tr {

@@ -5,8 +5,6 @@
     <?php if (have_posts()) : ?>
     <?php while (have_posts()) : the_post(); ?>
 
-
-
     <div class="container">
         <div class="row">
             <div class="col-lg-offset-2 col-lg-8 col-md-offset-2 col-md-8">
@@ -25,17 +23,7 @@
                       </g>
                   </svg>
 
-                    <?php
-
-                        $beertype_args = array('orderby' => 'term_order');
-                        $beer_types = wp_get_post_terms( $post->ID, 'beer_type', $beertype_args );
-
-                        foreach( $beer_types as $beer_type ) {
-                          /*  echo '<a href="' . get_term_link( $beer_type ) . '">' . $beer_type->name . '</a>'; */
-                            echo $beer_type->name;
-                        }
-
-                    ?>
+                    <?php the_field('øltype'); ?>
                 </div>
                 <hr>
 
@@ -44,14 +32,27 @@
 
                           <!-- Bryggmester -->
                           <div class="col-lg-6">
-
-                                <div class="col-lg-4">
-                                  <img class="bryggmester-bilde" src="<?php bloginfo('stylesheet_directory'); ?>/images/peter_profilbilde.png">
+                                <!-- Bilde -->
+                                <div class="col-lg-4 bryggmester-bilde">
+                                <?php
+                                  $values = get_field('bryggmester');
+                                  if($values)
+                                  $array = array_values($values);
+                                  echo $array[10];
+                                   ?>
                                 </div>
 
+                                <!-- Navn -->
                                 <div class="col-lg-6">
                                   <h2 class="bryggmester">Bryggmester</h2>
-                                  <p>navn her</p>
+                                  <p>
+                                    <?php
+                                        $values = get_field('bryggmester');
+                                        if($values)
+                                        $array = array_values($values);
+                                        echo $array[1];
+                                        ?>
+                                  </p>
                                 </div>
 
                           </div>
@@ -62,26 +63,24 @@
                             <aside class="beer__metadata">
 
                                 <div class="beer__metadata-item">
-                                    <strong>Bryggedato</strong>:
-                                </div>
-
-                                <div class="beer__metadata-item">
+                                    <strong>Bryggedato:</strong>
                                     <?php
-
-                                        $beer_strength = beer_strength_get_meta( 'beer_strength' );
-                                        echo '<strong>Ølstyrke</strong>: ' . $beer_strength . '';
+                                      the_field('bryggedato');
                                     ?>
                                 </div>
 
                                 <div class="beer__metadata-item">
-                                    <?php
-                                        $beercolor_args = array('orderby' => 'term_order');
-                                        $cork_colors = wp_get_post_terms( $post->ID, 'cork_color', $beercolor_args );
-                                        foreach( $cork_colors as $cork_color ) {
-                                            /* echo '<a href="' . get_term_link( $cork_color ) . '">' . $cork_color->name . '</a>'; */
-                                            echo '<strong>Korkfarge</strong>: ' . $cork_color->name;
-                                        }
-                                    ?>
+                                  <strong>Ølstyrke:</strong>
+                                  <?php
+                                    the_field('ølstyrke');
+                                  ?>
+                                </div>
+
+                                <div class="beer__metadata-item">
+                                  <strong>Korkfarge:</strong>
+                                  <?php
+                                    the_field('korkfarge');
+                                  ?>
                                 </div>
 
                             </aside>
@@ -104,9 +103,21 @@
                               <th>Alc.</th>
                             </tr>
                             <tr>
-                              <td>tall1</td>
-                              <td>tall2</td>
-                              <td>tall3</td>
+                              <td>
+                                <?php
+                                    the_field('odteoretisk');
+                                ?>
+                              </td>
+                              <td>
+                                <?php
+                                    the_field('fdteoretisk');
+                                ?>
+                              </td>
+                              <td>
+                                <?php
+                                    the_field('alcteoretisk');
+                                ?> %
+                              </td>
                             </tr>
                           </table>
                         </div>
@@ -120,9 +131,21 @@
                               <th>Alc.</th>
                             </tr>
                             <tr>
-                              <td>tall1</td>
-                              <td>tall2</td>
-                              <td>tall3</td>
+                              <td>
+                                <?php
+                                    the_field('odmalt');
+                                ?>
+                              </td>
+                              <td>
+                                <?php
+                                    the_field('fdmalt');
+                                ?>
+                              </td>
+                              <td>
+                                <?php
+                                    the_field('alcmalt');
+                                ?> %
+                              </td>
                             </tr>
                           </table>
                         </div>
@@ -131,9 +154,52 @@
                     <br />
                     <br />
 
-                    <article class="beer__body-text" id="post-<?php the_ID(); ?>">
-                        <?php  the_content(); ?>
-                    </article>
+                    <section class="beer-recipe">
+                      <h2>Oppskrift</h2>
+
+                      <!-- Malt og humle -->
+                        <div class="row">
+                            <div class="col-lg-6">
+                              <h3>Malt</h3>
+                              <?php
+                                  the_field('malt');
+                              ?>
+                            </div>
+
+                            <div class="col-lg-6">
+                              <h3>Humle</h3>
+                              <?php
+                                  the_field('humle');
+                              ?>
+                            </div>
+                        </div>
+                        <br />
+                        <!-- Mesking og gjær -->
+                        <div class="row">
+                            <div class="col-lg-6">
+                              <h3>Mesketemperatur og tid</h3>
+                              <?php
+                                  the_field('mesketemperatur_og_tid');
+                              ?>
+                            </div>
+
+                            <div class="col-lg-6">
+                              <h3>Gjær</h3>
+                              <?php
+                                  the_field('gjar');
+                              ?>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-lg-6">
+                              <h3>Spesialingredienser</h3>
+                              <?php
+                                  the_field('spesialingredienser');
+                              ?>
+                            </div>
+                        </div>
+                      </section>
 
                     <br />
                     <br />
@@ -143,6 +209,31 @@
                         Slett
                     </a>
                 </section>
+
+                <section class="comments">
+                  <h3>Kommentarer</h3>
+
+                  <div class="row">
+                      <?php foreach (get_comments() as $comment): ?>
+                        
+                        <div class="comment-author">
+                          <?php echo $comment->comment_author; ?> sier:
+                        </div>
+                        <div class="comment-body">
+                          <?php echo $comment->comment_content; ?>
+                        </div>
+
+                      <?php endforeach; ?>
+
+                  </div>
+
+                  <div class="col-lg-12">
+                    <!-- NY KOMMENTAR FORM -->
+                    <?php comment_form( $args, $post_id ); ?>
+                  </div>
+
+                </section> <!-- end comments -->
+
             </div>
         </div>
     </div>
