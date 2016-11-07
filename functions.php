@@ -19,6 +19,8 @@
 
     function fot_menus() {
         $locations = array(
+            'headermenuleft' => 'Header menu left',
+            'headermenuright' => 'Header menu right',
             'headermenu' => 'Header menu',
             'footermenu' => 'Footer menu',
         );
@@ -26,7 +28,7 @@
 
     }
     add_action( 'init', 'fot_menus' );
-    
+
 
     /* TinyMCE editor */
     function bbp_enable_visual_editor( $args = array() ) {

@@ -27,10 +27,6 @@
         <link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://fotverksbryggeriet.no/xmlrpc.php?rsd" />
         <link rel="pingback" href="http://fotverksbryggeriet.no/xmlrpc.php">
 
-                    <!--[if lt IE 9]>
-                               <script src="<?php echo get_template_directory_uri(); ?>/scripts/html5shiv.js"></script>
-                           <![endif]-->
-
         <link rel="apple-touch-icon" sizes="57x57" href="<?php echo get_template_directory_uri(); ?>/images/favicon/apple-icon-57x57.png">
         <link rel="apple-touch-icon" sizes="60x60" href="<?php echo get_template_directory_uri(); ?>/images/favicon/apple-icon-60x60.png">
         <link rel="apple-touch-icon" sizes="72x72" href="<?php echo get_template_directory_uri(); ?>/images/favicon/apple-icon-72x72.png">
@@ -61,49 +57,74 @@
 
         <!--header-->
         <header class="header" role="banner">
-            <div class="header__column header__column--left">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="header__table">
+                            <div class="header__column header__column--left">
+                                <!--navigation-->
+                                <nav class="navigation" role="navigation">
+                                    <?php
+                                        $defaults = array(
+                                        'theme_location'  => 'headermenuleft',
+                                        'container'       => '',
+                                        'container_class' => '',
+                                        'echo'            => false,
+                                        'fallback_cb'     => false,
+                                        'items_wrap'      => '%3$s',
+                                        'depth'           => 0
+                                        );
+                                        echo strip_tags(wp_nav_menu( $defaults ), '<a>');
+                                    ?>
+                                </nav>
+                                <!--navigation-->
+                            </div>
 
-                    <a class="fot-logo__link" href="http://fotverksbryggeriet.no">
-                        <img class="bryggeri-logo" src="<?php bloginfo('stylesheet_directory'); ?>/images/bryggeri_logo.png">
-                    </a>
-
-           </div>
-           <div class="header__column header__column--right">
-                <!--navigation-->
-                <nav class="navigation" role="navigation">
-                    <?php
-                        $defaults = array(
-                        'theme_location'  => 'fotverksbryggerietheadermenu',
-                        'container'       => '',
-                        'container_class' => '',
-                        'echo'            => false,
-                        'fallback_cb'     => false,
-                        'items_wrap'      => '%3$s',
-                        'depth'           => 0
-                        );
-                        echo strip_tags(wp_nav_menu( $defaults ), '<a>');
-                    ?>
-                </nav>
-                <!--navigation-->
-         </div>
-
-
+                            <div class="header__column header__column--center">
+                                <a class="fot-logo__link" href="http://fotverksbryggeriet.no">
+                                    <img class="bryggeri-logo" src="<?php echo get_template_directory_uri(); ?>/images/bryggeri_logo.png" alt="FVB logo" />
+                                </a>
+                            </div>
+                            <div class="header__column header__column--right">
+                                <!--navigation-->
+                                <nav class="navigation" role="navigation">
+                                    <?php
+                                        $defaults = array(
+                                        'theme_location'  => 'headermenuright',
+                                        'container'       => '',
+                                        'container_class' => '',
+                                        'echo'            => false,
+                                        'fallback_cb'     => false,
+                                        'items_wrap'      => '%3$s',
+                                        'depth'           => 0
+                                        );
+                                        echo strip_tags(wp_nav_menu( $defaults ), '<a>');
+                                    ?>
+                                </nav>
+                                <!--navigation-->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </header>
         <!--header-->
+
+        <!--Breadcrumbs -->
         <div class="container">
-          <div class="row">
-            <div class="col-lg-8 col-lg-offset-2" typeof="BreadcrumbList" vocab="http://schema.org/">
-                <?php if(function_exists('bcn_display'))
-                {
-                    bcn_display();
-                }?>
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2" typeof="BreadcrumbList" vocab="http://schema.org/">
+                    <?php
+                        if (function_exists('bcn_display'))
+                                       {
+                                           bcn_display();
+                                       }
+                    ?>
+                </div>
             </div>
-          </div>
         </div>
 
 
         <section id="main" class="content" role="main">
-          <!--Breadcrumbs -->
 
-
-                <?php // if ( is_user_logged_in() ): ?>
+            <?php // if ( is_user_logged_in() ): ?>
