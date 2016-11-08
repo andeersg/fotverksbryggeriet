@@ -1,3 +1,4 @@
+<?php /* Template Name: Search */ ?>
 <?php get_header(); ?>
 
 <?php if (have_posts()) : ?>
